@@ -4,14 +4,17 @@ def read_input():
     mode = input().strip()
 
     if mode == "I":
-        pattern = mode.strip()
-        text = mode.strip()
+        pattern_b = input()
+        text_b = input()
+        pattern = pattern_b.strip()
+        text = text_b.strip()
     elif mode == "F":
         with open("./tests/06") as f:
             pattern = f.readline().strip()
             text = f.readline().strip()
     else:
         raise ValueError("Invalid input mode")
+    
     return pattern, text
 
 
